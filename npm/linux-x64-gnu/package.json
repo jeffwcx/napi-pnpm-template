@@ -1,16 +1,6 @@
 {
   "name": "napi-pnpm-linux-x64-gnu",
   "version": "0.1.0",
-  "os": [
-    "linux"
-  ],
-  "cpu": [
-    "x64"
-  ],
-  "main": "napi-pnpm.linux-x64-gnu.node",
-  "files": [
-    "napi-pnpm.linux-x64-gnu.node"
-  ],
   "description": "A napi package template using pnpm and vitest",
   "keywords": [
     "pnpm",
@@ -20,16 +10,26 @@
     "Rust",
     "node-addon"
   ],
-  "author": "jeffwcx <jeffwcx@icloud.com>",
+  "repository": "https://github.com/jeffwcx/napi-pnpm-template.git",
   "license": "MIT",
+  "author": "jeffwcx <jeffwcx@icloud.com>",
+  "main": "napi-pnpm.linux-x64-gnu.node",
+  "files": [
+    "napi-pnpm.linux-x64-gnu.node"
+  ],
   "engines": {
     "node": ">= 10"
   },
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "x64"
+  ],
   "publishConfig": {
     "access": "public",
     "registry": "https://registry.npmjs.org/"
   },
-  "repository": "https://github.com/jeffwcx/napi-pnpm-template.git",
   "libc": [
     "glibc"
   ]

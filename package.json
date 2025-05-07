@@ -1,0 +1,90 @@
+{
+  "name": "napi-pnpm",
+  "version": "0.1.0",
+  "description": "A napi package template using pnpm and vitest",
+  "keywords": [
+    "pnpm",
+    "language-dectector",
+    "napi-rs",
+    "NAPI",
+    "Rust",
+    "node-addon"
+  ],
+  "repository": "https://github.com/jeffwcx/napi-pnpm-template.git",
+  "license": "MIT",
+  "author": "jeffwcx <jeffwcx@icloud.com>",
+  "main": "index.js",
+  "files": [
+    "index.d.ts",
+    "index.js"
+  ],
+  "scripts": {
+    "artifacts": "napi artifacts",
+    "bench": "node --import @oxc-node/core/register benchmark/bench.ts",
+    "build": "napi build --platform --release",
+    "build:debug": "napi build --platform",
+    "format": "run-p format:es format:rs format:toml",
+    "format:es": "eslint . --cache --fix",
+    "format:toml": "taplo format",
+    "format:rs": "cargo fmt",
+    "lint": "eslint . --report-unused-disable-directives --max-warnings 0 --cache",
+    "prepublishOnly": "napi prepublish -t npm",
+    "test": "vitest",
+    "version": "napi version",
+    "prepare": "husky"
+  },
+  "lint-staged": {
+    "*.@(js,jsx,mjs,cjs,ts,tsx,mts,cts,json)": [
+      "pnpm format:es"
+    ],
+    "*.@(md)": [
+      "prettier --write --ignore-unknown"
+    ],
+    "*.toml": [
+      "taplo format"
+    ]
+  },
+  "prettier": "@jeffwcx/prettier-config",
+  "devDependencies": {
+    "@jeffwcx/eslint-config": "^0.6.0",
+    "@jeffwcx/prettier-config": "^0.1.2",
+    "@napi-rs/cli": "^2.18.4",
+    "@oxc-node/core": "^0.0.27",
+    "@taplo/cli": "^0.7.0",
+    "chalk": "^5.4.1",
+    "eslint": "^9.26.0",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.5.0",
+    "npm-run-all2": "^8.0.0",
+    "prettier": "^3.5.3",
+    "tinybench": "^4.0.1",
+    "typescript": "^5.8.2",
+    "vitest": "^3.1.2"
+  },
+  "packageManager": "pnpm@9.15.9+sha512.68046141893c66fad01c079231128e9afb89ef87e2691d69e4d40eee228988295fd4682181bae55b58418c3a253bde65a505ec7c5f9403ece5cc3cd37dcf2531",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "napi": {
+    "name": "napi-pnpm",
+    "triples": {
+      "defaults": true,
+      "additional": [
+        "x86_64-unknown-linux-musl",
+        "aarch64-unknown-linux-gnu",
+        "i686-pc-windows-msvc",
+        "armv7-unknown-linux-gnueabihf",
+        "aarch64-apple-darwin",
+        "aarch64-linux-android",
+        "x86_64-unknown-freebsd",
+        "aarch64-unknown-linux-musl",
+        "aarch64-pc-windows-msvc",
+        "armv7-linux-androideabi"
+      ]
+    }
+  }
+}

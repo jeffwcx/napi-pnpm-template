@@ -1,0 +1,33 @@
+{
+  "name": "napi-pnpm-darwin-arm64",
+  "version": "0.1.0",
+  "os": [
+    "darwin"
+  ],
+  "cpu": [
+    "arm64"
+  ],
+  "main": "napi-pnpm.darwin-arm64.node",
+  "files": [
+    "napi-pnpm.darwin-arm64.node"
+  ],
+  "description": "A napi package template using pnpm and vitest",
+  "keywords": [
+    "pnpm",
+    "language-dectector",
+    "napi-rs",
+    "NAPI",
+    "Rust",
+    "node-addon"
+  ],
+  "author": "jeffwcx <jeffwcx@icloud.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/jeffwcx/napi-pnpm-template.git"
+}

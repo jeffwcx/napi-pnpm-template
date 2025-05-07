@@ -1,0 +1,33 @@
+{
+  "name": "napi-pnpm-linux-arm-gnueabihf",
+  "version": "0.1.0",
+  "os": [
+    "linux"
+  ],
+  "cpu": [
+    "arm"
+  ],
+  "main": "napi-pnpm.linux-arm-gnueabihf.node",
+  "files": [
+    "napi-pnpm.linux-arm-gnueabihf.node"
+  ],
+  "description": "A napi package template using pnpm and vitest",
+  "keywords": [
+    "pnpm",
+    "language-dectector",
+    "napi-rs",
+    "NAPI",
+    "Rust",
+    "node-addon"
+  ],
+  "author": "jeffwcx <jeffwcx@icloud.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">= 10"
+  },
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "repository": "https://github.com/jeffwcx/napi-pnpm-template.git"
+}
